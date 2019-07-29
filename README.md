@@ -1,0 +1,1 @@
+This repo is for Week 2 of Javascript Bootcamp.

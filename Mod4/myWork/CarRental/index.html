@@ -19,7 +19,7 @@
 <!-- this section will ask the user to input how many scoops of ice cream they would like and
     will provide check boxes for various toppings -->
     <fieldset>
-        <div class="container col md-6 scoops">
+        <div class="container">
             <form name="car rental">
                 <div class="row my-3">
                     <label for="pickupDate">Pickup date</label>
@@ -30,22 +30,32 @@
                     <label for="numRentalDays">Number of Days</label>
                     <input type="number" id="numRentalDays" name="numRentalDays">
                 </div>
+             <h2 id="carTypes">Car types</h2>
+             <div class="row my-3">
+                 <select id="vehicles" name="vehicles">
+                     <option value="economy">Economy</option>
+                     <option value="compact">Compact</option>
+                     <option value="intermediate">Intermediate</option>
+                     <option value="fullSize">Full Size</option>
+                 </select>
+             </div>
+                <h2 id="options">Options</h2>
 
-                <h2>Options</h2>
-
-                <div class="row my-3">
+                <div class="row my-3 col-md-4">
                     <input type="checkbox" id="tollTag" name="tollTag" value="tollTag"> Electronic Toll Tag ($3.95/day)
                 </div>
 
-                <div class="row my-3">
+                <div class="row my-3 col-md-4">
                     <input type="checkbox" id="gps" name="gps" value="gps"> GPS ($2.95/day)
                 </div>
 
-                <div class="row my-3">
+                <div class="row my-3 col-md-4">
                     <input type="checkbox" id="roadsideAssist" name="roadsideAssist" value="roadsideAssist"> Roadside Assistance ($2.95/day)
                 </div>
+                
 
-                <h2> Under 25</h2>
+               
+                <h2 id="age"> Under 25</h2>
 
                     <div class="form-check form-check-inline">
                         <input class="form-check-input" type ="radio" name="age" id="ageNot25" value="ageNot25" checked>
@@ -68,21 +78,19 @@
                         <input type="date" id="dropOffDate" name="dropOffDate">
                     </div>
 
-
-
                  <div class="row my-3">
                     <label for="carTotal">Car Rental:</label>
-                    <input type="number" id="carTotal" name="carTotal">
+                    <input type="number" id="carTotal" name="carTotal" readonly>
                  </div>
 
                  <div class="row my-3">
                     <label for="optionTotal">Options:</label>
-                    <input type="number" id="optionTotal" name="optionTotal">
+                    <input type="number" id="optionTotal" name="optionTotal" readonly>
                  </div>
 
                  <div class="row my-3">
                     <label for="surchargeTotal">Under 25 surcharge:</label>
-                    <input type="number" id="surchargeTotal" name="surchargeTotal">
+                    <input type="number" id="surchargeTotal" name="surchargeTotal" readonly>
                  </div>
 
                  <div class="row my-3">   
@@ -90,7 +98,7 @@
 
                  <div class="row my-3">  
                     <label for="totalRentalCost">Total due:</label>
-                    <input type="number" id="totalRentalCost" name="totalRentalCost"> 
+                    <input type="number" id="totalRentalCost" name="totalRentalCost" readonly> 
                 </div>
             </form>
         </div>

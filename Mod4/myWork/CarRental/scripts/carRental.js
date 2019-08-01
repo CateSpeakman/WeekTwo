@@ -7,10 +7,47 @@
 /*this function will calculate the cost of the car rental days*/ 
 
 
-function getCarPrice(numRentalDays)
+function getVehicleCost()
+{
+
+    const vehicles = document.getElementById("vehicles");
+    let vehType = vehicles.options[vehicles.selectedIndex].text;
+    let vehicleCost =0; 
+
+    switch(vehType)
+    {
+        case "Economy":
+            vehicleCost = 29.99;
+            break;
+
+        case "Compact":
+            vehicleCost = 34.99;
+            break;
+
+        case "Intermediate":
+            vehicleCost = 39.99;
+            break;
+
+        case "Full Size":
+            vehicleCost = 44.99;
+            break;
+
+        default:
+            vehicleCost = 0;
+            alert("Please select vehicle");
+    }
+
+    return vehicleCost;
+
+}
+
+
+
+
+function getCarPrice(numRentalDays, vehicleCost)
 {
   
-    let carPrice = numRentalDays * 29.99
+    let carPrice = numRentalDays * vehicleCost;
 
     return carPrice;
 }
@@ -66,8 +103,8 @@ function getTotalCost()
     let numRentalDays = document.getElementById("numRentalDays").value;
     numRentalDays = Number(numRentalDays);
 
-    
-    let totalCar = getCarPrice(numRentalDays);
+    let vehicleCost = getVehicleCost();
+    let totalCar = getCarPrice(numRentalDays, vehicleCost);
     let totalOptions = getOptionsTotal(numRentalDays);
     let totalSurcharge = getSurcharge(totalCar);
 

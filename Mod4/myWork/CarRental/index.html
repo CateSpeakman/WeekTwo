@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <!-- personalized css-->
+    <link rel="stylesheet" href="css/carRental.css">
+    <title>ACME Car Rental</title>
+  </head>
+
+  
+  <!-- this is the main section of the page.  It will contain a menu for an ice cream order-->
+  <body>
+    <h1 >ACME Car Rental</h1>
+<!-- this section will ask the user to input how many scoops of ice cream they would like and
+    will provide check boxes for various toppings -->
+    <fieldset>
+        <div class="container col md-6 scoops">
+            <form name="car rental">
+                <div class="row my-3">
+                    <label for="pickupDate">Pickup date</label>
+                    <input type="date" id="pickupDate" name="pickupDate">
+                </div>
+
+                <div class="row my-3">
+                    <label for="numRentalDays">Number of Days</label>
+                    <input type="number" id="numRentalDays" name="numRentalDays">
+                </div>
+
+                <h2>Options</h2>
+
+                <div class="row my-3">
+                    <input type="checkbox" id="tollTag" name="tollTag" value="tollTag"> Electronic Toll Tag ($3.95/day)
+                </div>
+
+                <div class="row my-3">
+                    <input type="checkbox" id="gps" name="gps" value="gps"> GPS ($2.95/day)
+                </div>
+
+                <div class="row my-3">
+                    <input type="checkbox" id="roadsideAssist" name="roadsideAssist" value="roadsideAssist"> Roadside Assistance ($2.95/day)
+                </div>
+
+                <h2> Under 25</h2>
+
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type ="radio" name="age" id="ageNot25" value="ageNot25" checked>
+                        <label class= "form-check-label" for="ageRadio">No</label>
+                     </div>
+
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type ="radio" name="age" id="age25" value="age25">
+                        <label class= "form-check-label" for="ageRadio">Yes</label>
+                    </div>
+
+                    <div class="row my-3">   
+                    </div>
+
+                <input class="btn btn-success" type="button" id="totalCostBtn" value="Estimate Total Cost">
+    
+                  
+                <div class="row my-3">
+                        <label for="dropOffDate">Drop off Date</label>
+                        <input type="date" id="dropOffDate" name="dropOffDate">
+                    </div>
+
+
+
+                 <div class="row my-3">
+                    <label for="carTotal">Car Rental:</label>
+                    <input type="number" id="carTotal" name="carTotal">
+                 </div>
+
+                 <div class="row my-3">
+                    <label for="optionTotal">Options:</label>
+                    <input type="number" id="optionTotal" name="optionTotal">
+                 </div>
+
+                 <div class="row my-3">
+                    <label for="surchargeTotal">Under 25 surcharge:</label>
+                    <input type="number" id="surchargeTotal" name="surchargeTotal">
+                 </div>
+
+                 <div class="row my-3">   
+                 </div>
+
+                 <div class="row my-3">  
+                    <label for="totalRentalCost">Total due:</label>
+                    <input type="number" id="totalRentalCost" name="totalRentalCost"> 
+                </div>
+            </form>
+        </div>
+    </fieldset>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src="scripts/carRental.js"></script>
+  </body>
+</html>
